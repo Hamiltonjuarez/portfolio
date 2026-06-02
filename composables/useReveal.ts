@@ -1,0 +1,33 @@
+// Adds `.is-visible` to elements when they enter the viewport.
+// Pair with `.reveal`, `.reveal-up`, or `.reveal-stagger` classes from main.css.
+
+export const useReveal = () => {
+  if (!import.meta.client) return;
+
+  onMounted(() => {
+    const targets = document.querySelectorAll<HTMLElement>(
+      ".reveal, .reveal-up, .reveal-stagger"
+    );
+
+    if (!("IntersectionObserver" in window)) {
+      targets.forEach((el) => el.classList.add("is-visible"));
+      return;
+    }
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+    );
+
+    targets.forEach((el) => io.observe(el));
+
+    onBeforeUnmount(() => io.disconnect());
+  });
+};
