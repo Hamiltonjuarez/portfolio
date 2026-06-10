@@ -115,18 +115,26 @@ port (base 8100 + index). Pipeline for a Laravel+SQLite app:
 3. SQLite: `touch database/database.sqlite`, set `DB_CONNECTION=sqlite`
 4. `php artisan migrate --seed` (tolerate seed failures; continue)
 5. `npm install && npm run build` (or `npm run dev`)
-6. Serve: Laravel apps via `php artisan serve --port=<port>`.
-   **Non-Laravel apps** (Nuxt `buddy-client-web-app-3`; Vite/React
-   `colon-rent`, `crudo-web`, `ficus-web`) serve via their own
-   `npm run dev`/`preview` (or their compose file) on `<port>` — there is
-   no `artisan serve` for these.
+6. Serve: **Laravel apps via `php artisan serve --port=<port>`** — this
+   includes the Inertia apps whose frontend is React/Vue via Vite
+   (`colon-rent`, `crudo-web`, `ficus-web` all have `artisan`; Vite is only
+   their asset bundler, so they still serve through artisan after
+   `npm run build`). The **only** genuine non-Laravel app is the Nuxt
+   `buddy-client-web-app-3` (no `artisan`) — serve it via
+   `npm run build && npm run preview -- --port <port>` (or `dev`).
 7. Playwright: navigate to home + 2–4 key routes, capture
    desktop (1440×900) + one mobile shot; save to
    `public/projects/<slug>/NN-<route>.png`
 8. Tear down server; report success/failure + captured filenames.
 
-Docker repos (`barra-oliba`, `buddy-*`, `colon-rent`, `crudo`, `ficus`,
-`simple-travel`) may use their compose file instead of the bare pipeline.
+All Laravel targets boot via the bare `artisan serve` pipeline on their
+assigned port (the Docker branch is intentionally not used — it ignores the
+assigned port and risks collisions during the parallel sweep).
+
+**"Booted but empty" is a soft failure.** Several home pages render DB
+content (products/testimonials/categories) via Inertia/seeders. If seeding
+partially fails and the page renders empty, treat it as a failure and use a
+fallback asset rather than capturing a blank screenshot.
 
 **Failure handling (expected ~20–40% of repos):**
 - Boot fails (missing API secrets, build break, seed hard-fail) → fallback:
