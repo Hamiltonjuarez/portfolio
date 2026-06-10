@@ -7,7 +7,7 @@
 ## Goal
 
 Replace the 4 fabricated example projects in the portfolio with the user's
-real work from `/home/hamilton/Desktop/cobra-proyects` (25 repos). Each
+real work from `/home/hamilton/Desktop/cobra-proyects` (24 repos). Each
 portfolio entry gets a factual (anonymized) description and locally-captured
 UI screenshots. After content lands, stand up hosting infrastructure.
 
@@ -48,7 +48,9 @@ UI screenshots. After content lands, stand up hosting infrastructure.
    `solid/ast-web2` composer name). Anonymized public label.
 3. **Solid Platform** (`slug: solid-platform`) — agency platform + WP store
    toolkit (internal). Repos: `solid-2026-laravel`, `solid-wp-stores`,
-   `solid-wp-vendor-onsus`. Brand kept ("Solid").
+   `solid-wp-vendor-onsus`. Brand kept ("Solid"). **`solid-2026-laravel` IS
+   a boot+capture target** (Laravel app with UI); the `solid-wp-*` repos are
+   description-only (folded into Supporting work, not bootable here).
 
 ### Individual case studies (visual web apps)
 
@@ -113,7 +115,11 @@ port (base 8100 + index). Pipeline for a Laravel+SQLite app:
 3. SQLite: `touch database/database.sqlite`, set `DB_CONNECTION=sqlite`
 4. `php artisan migrate --seed` (tolerate seed failures; continue)
 5. `npm install && npm run build` (or `npm run dev`)
-6. `php artisan serve --port=<port>`
+6. Serve: Laravel apps via `php artisan serve --port=<port>`.
+   **Non-Laravel apps** (Nuxt `buddy-client-web-app-3`; Vite/React
+   `colon-rent`, `crudo-web`, `ficus-web`) serve via their own
+   `npm run dev`/`preview` (or their compose file) on `<port>` — there is
+   no `artisan serve` for these.
 7. Playwright: navigate to home + 2–4 key routes, capture
    desktop (1440×900) + one mobile shot; save to
    `public/projects/<slug>/NN-<route>.png`
@@ -131,8 +137,9 @@ Docker repos (`barra-oliba`, `buddy-*`, `colon-rent`, `crudo`, `ficus`,
   provide a manual screenshot.
 
 **Port/concurrency:** agents run in parallel but each binds a distinct port
-and works only inside its own repo dir (no shared state). Cap concurrency to
-avoid resource exhaustion.
+(base 8100 + index) and works only inside its own repo dir (no shared
+state). **Cap at max 3–4 concurrent boots** to avoid CPU/RAM exhaustion from
+parallel `composer install` / `npm run build`.
 
 ## Execution Order
 
@@ -170,8 +177,9 @@ Hosting decision + setup is a separate spec/plan once content is in.
 
 ## Success Criteria
 
-- `composables/useProjects.ts` contains ~16 factual, anonymized entries
-  (3 grouped families + ~13 individual), replacing all fabricated examples.
+- `composables/useProjects.ts` contains ~13–16 factual, anonymized entries
+  (3 grouped families + ~10–13 individual; ambiguous repos may drop to
+  Supporting work), replacing all fabricated examples.
 - Each entry that booted has ≥1 real screenshot in `public/projects/<slug>/`;
   non-booting entries have a documented fallback.
 - `npm run build` succeeds; home grid + each `/work/<slug>` page render.
