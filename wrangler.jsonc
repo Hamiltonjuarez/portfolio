@@ -1,9 +1,0 @@
-{
-  // Static-only deploy: nuxt generate -> .output/public, served as Workers Assets.
-  // No "main"/entry: this is a pure static site, not a Worker.
-  "name": "portfolio",
-  "compatibility_date": "2025-01-01",
-  "assets": {
-    "directory": "./.output/public"
-  }
-}
