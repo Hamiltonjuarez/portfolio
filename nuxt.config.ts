@@ -1,7 +1,7 @@
 import tailwindcss from "@tailwindcss/vite";
 
 // Production origin — used for absolute OG/sitemap URLs. Change if the domain differs.
-const siteUrl = "https://hamilton.dev";
+const siteUrl = "https://portfolio-3ym.pages.dev";
 
 export default defineNuxtConfig({
   compatibilityDate: "2025-01-01",
