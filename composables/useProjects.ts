@@ -55,7 +55,10 @@ const projects: Project[] = [
       },
     ],
     screenshots: [
-      { src: "01-home.jpg", alt: "Buddy Assist marketing banner" },
+      { src: "01-home.jpg", alt: "Buddy storefront home with service categories" },
+      { src: "02-services.jpg", alt: "Buddy service catalog with filters" },
+      { src: "03-login.jpg", alt: "Branded Buddy sign-in screen" },
+      { src: "04-mobile.jpg", alt: "Mobile view of the storefront" },
     ],
     accent: "#e46767",
   },
@@ -618,11 +621,190 @@ const projects: Project[] = [
     ],
     accent: "#e46795",
   },
+  {
+    slug: "39dollarglasses",
+    name: "39DollarGlasses",
+    tagline: "High-volume prescription eyewear store with virtual try-on and a lens configurator.",
+    description:
+      "39DollarGlasses is a long-running, high-traffic US e-commerce retailer selling prescription eyeglasses and sunglasses with lenses included. As tech lead I owned the core e-commerce platform, leading frontend and backend across the Laravel/Node back end and the React/Blade storefront — the product catalog, lens configuration, CRM and internal dashboards, and the virtual try-on and home-trial experiences.",
+    year: "2021 — 2024",
+    role: "Tech Lead · Full-stack Developer",
+    isPrivate: false,
+    link: { label: "Visit site", href: "https://www.39dollarglasses.com" },
+    stack: ["Laravel", "Node.js", "React", "Blade", "MySQL"],
+    responsibilities: [
+      "Led frontend and backend development as tech lead and senior owner of the core e-commerce platform (React, Blade, Laravel, Node.js).",
+      "Built CRM modules, internal dashboards, and customer-facing features that streamlined operations and drove conversion.",
+      "Worked on the lens configurator: lens type, coatings, tint, and prescription entry.",
+      "Improved UX and checkout flows alongside product and design to retain customers and reduce friction.",
+      "Drove SEO and performance improvements that expanded organic reach and sped up page loads.",
+    ],
+    architecture: [
+      "Laravel back end serving a React + Blade storefront.",
+      "Server-rendered Blade pages with React for interactive configurator and try-on widgets.",
+      "MySQL-backed catalog, orders, and customer accounts.",
+    ],
+    challenges: [
+      {
+        title: "A lens configurator with many dependent options",
+        body: "Prescription eyewear has a large, interdependent option space — lens type, coatings, tint, and Rx values — that has to stay valid and correctly priced as the customer changes any selection.",
+      },
+      {
+        title: "Prescription data entry customers can trust",
+        body: "Capturing prescriptions and pupillary distance accurately matters for a product made to the customer's eyes, so the entry flow has to guide and validate without scaring people off.",
+      },
+    ],
+    screenshots: [
+      { src: "01-home.jpg", alt: "39DollarGlasses storefront home page" },
+      { src: "02-eyeglasses.jpg", alt: "Eyeglasses product listing" },
+      { src: "03-home-trial.jpg", alt: "Virtual try-on and home-trial page" },
+      { src: "04-sunglasses.jpg", alt: "Sunglasses product listing" },
+      { src: "06-lens.jpg", alt: "Lens options and coatings" },
+      { src: "07-brands.jpg", alt: "Eyewear brands page" },
+      { src: "08-new.jpg", alt: "New arrivals listing" },
+      { src: "05-mobile.jpg", alt: "Mobile view of the storefront" },
+    ],
+    accent: "#67a7e4",
+  },
+  {
+    slug: "symple",
+    name: "Symple",
+    tagline: "UK property-compliance platform for certificates, inspections, and an engineer network.",
+    description:
+      "Symple automates property compliance for UK landlords, letting agents, and property managers — gas safety, EICR, EPC, PAT and related certificates — connecting them with a nationwide network of vetted engineers and tracking renewals. As a full-stack developer at Trezlabs I worked across the Laravel back end and the Vue front end.",
+    year: "2021 — 2024",
+    role: "Tech Lead · Senior Developer",
+    isPrivate: false,
+    link: { label: "Visit site", href: "https://www.symple.co.uk" },
+    stack: ["Laravel", "Inertia.js", "Vue.js", "Tailwind CSS", "MySQL"],
+    responsibilities: [
+      "Built features end to end as tech lead at Trezlabs — the senior resource on the agency's most demanding frontend work — with reusable component libraries that sped delivery across projects.",
+      "Worked on certificate ordering and compliance-tracking flows.",
+      "Worked on engineer/provider matching and scheduling.",
+      "Built supporting tools and pages such as the compliance checker and time-savings calculator.",
+    ],
+    architecture: [
+      "Laravel back end with a Vue front end.",
+      "MySQL-backed properties, certificates, and engineer records.",
+      "Automated renewal reminders and scheduling.",
+    ],
+    challenges: [
+      {
+        title: "Compliance rules that must stay correct",
+        body: "Each certificate type (gas, electrical, energy) carries its own validity period and legal requirements; modelling them so renewals and reminders fire on time is the core of the product.",
+      },
+      {
+        title: "Matching jobs to a national engineer network",
+        body: "Connecting each job to an available, qualified engineer across the country means the data model and scheduling logic have to reason about coverage, certification, and availability.",
+      },
+    ],
+    screenshots: [
+      { src: "01-home.jpg", alt: "Symple home page" },
+      { src: "02-landlords.jpg", alt: "Landlords solution page" },
+      { src: "03-compliance-checker.jpg", alt: "Compliance checker tool" },
+      { src: "04-providers.jpg", alt: "Service providers page" },
+      { src: "06-agents.jpg", alt: "Letting agents solution page" },
+      { src: "07-time-savings.jpg", alt: "Time-savings calculator" },
+      { src: "08-faqs.jpg", alt: "FAQs page" },
+      { src: "05-mobile.jpg", alt: "Mobile view of the home page" },
+    ],
+    accent: "#67e4c5",
+  },
+  {
+    slug: "digipharm",
+    name: "DigiPharm",
+    tagline: "Hebrew SEO link-building marketplace with tiered packages and partner sites.",
+    description:
+      "DigiPharm is an Israeli (Hebrew, right-to-left) platform for buying backlinks and content to improve SEO, connecting customers with 1,000+ partner sites through tiered one-time and subscription packages. As a full-stack developer at Trezlabs I worked across the Laravel back end and the Vue front end.",
+    year: "2021 — 2024",
+    role: "Tech Lead · Senior Developer",
+    isPrivate: false,
+    link: { label: "Visit site", href: "https://digipharm.co.il" },
+    stack: ["Laravel", "Inertia.js", "Vue.js", "Tailwind CSS", "MySQL"],
+    responsibilities: [
+      "Built features end to end as tech lead at Trezlabs — the senior resource on the agency's most demanding frontend work — with reusable component libraries that sped delivery across projects.",
+      "Worked on the package catalog and checkout for both one-time and subscription purchases.",
+      "Worked on the partner-site directory and order management.",
+      "Built the right-to-left, Hebrew-language storefront UI.",
+    ],
+    architecture: [
+      "Laravel back end with a Vue front end.",
+      "Right-to-left (Hebrew) interface throughout.",
+      "MySQL-backed packages, orders, partner sites, and subscriptions.",
+    ],
+    challenges: [
+      {
+        title: "A right-to-left Hebrew interface end to end",
+        body: "Building the whole storefront right-to-left in Hebrew means layout, typography, and component behaviour all have to mirror correctly — not just translate the copy.",
+      },
+      {
+        title: "One-time and subscription billing in one catalog",
+        body: "The same packages sell as both one-off purchases and recurring subscriptions, so the order and billing model has to handle both without duplicating the catalog.",
+      },
+    ],
+    screenshots: [
+      { src: "01-home.jpg", alt: "DigiPharm home page (Hebrew)" },
+      { src: "02-best.jpg", alt: "Featured packages page" },
+      { src: "03-optimization.jpg", alt: "SEO optimization services page" },
+      { src: "04-about-us.jpg", alt: "About page" },
+      { src: "06-courses.jpg", alt: "Courses and training page" },
+      { src: "07-links.jpg", alt: "Backlink packages page" },
+      { src: "08-contact.jpg", alt: "Contact page" },
+      { src: "05-mobile.jpg", alt: "Mobile view of the home page" },
+    ],
+    accent: "#9567e4",
+  },
+  {
+    slug: "imgprep",
+    name: "IMGPrep",
+    tagline: "Residency-match consulting platform for international medical graduates.",
+    description:
+      "IMGPrep is a US academic-consulting service that helps international medical graduates match into US residency programs — match consulting, clinical externships, ERAS application support, interview prep, and a data-driven programs list. As a full-stack developer at Trezlabs I worked across the Laravel back end and the Vue front end.",
+    year: "2021 — 2024",
+    role: "Tech Lead · Senior Developer",
+    isPrivate: false,
+    link: { label: "Visit site", href: "https://www.imgprep.com" },
+    stack: ["Laravel", "Inertia.js", "Vue.js", "Tailwind CSS", "MySQL"],
+    responsibilities: [
+      "Built features end to end as tech lead at Trezlabs — the senior resource on the agency's most demanding frontend work — with reusable component libraries that sped delivery across projects.",
+      "Worked on service pages for match consulting, externships, and ERAS support.",
+      "Worked on the customized residency-programs list and search.",
+      "Built lead capture and the applicant account area.",
+    ],
+    architecture: [
+      "Laravel back end with a Vue front end.",
+      "MySQL-backed program data, applicant profiles, and service content.",
+      "Data-driven program matching based on scores, visa status, and timeline.",
+    ],
+    challenges: [
+      {
+        title: "Targeting programs from messy real-world criteria",
+        body: "Matching applicants to residency programs depends on scores, visa status, and timing, so the programs list has to filter and rank against criteria that vary widely per applicant.",
+      },
+    ],
+    screenshots: [
+      { src: "01-home.jpg", alt: "IMGPrep home page" },
+      { src: "02-consulting.jpg", alt: "Residency match consulting page" },
+      { src: "03-programs.jpg", alt: "Residency programs list" },
+      { src: "04-externship.jpg", alt: "Clinical experience and externship page" },
+      { src: "05-mobile.jpg", alt: "Mobile view of the home page" },
+    ],
+    accent: "#67e489",
+  },
 ];
+
+// Pinned to the top of the listing, in this order. Everything else keeps its
+// original order below them.
+// ponytail: featured-first via a slug list; reorder the array literally if it grows
+const featured = ["39dollarglasses", "buddy-assist", "digipharm", "symple"];
+const rank = (slug: string) => {
+  const i = featured.indexOf(slug);
+  return i === -1 ? featured.length + 1 : i;
+};
 
 export const useProjects = () => {
   return {
-    all: () => projects,
+    all: () => [...projects].sort((a, b) => rank(a.slug) - rank(b.slug)),
     bySlug: (slug: string) => projects.find((p) => p.slug === slug),
   };
 };

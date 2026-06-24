@@ -41,7 +41,7 @@ const isHome = computed(() => route.path === "/");
           About
         </a>
         <a
-          href="mailto:hamilton@solid.com.sv"
+          href="mailto:hamiltonjuarez97@gmail.com"
           class="ml-1 rounded-md bg-ink-100 px-3 py-1.5 text-sm font-medium text-ink-950 transition hover:bg-accent"
         >
           Contact

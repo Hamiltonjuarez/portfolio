@@ -5,9 +5,9 @@ const projects = all();
 useReveal();
 
 useSeoMeta({
-  title: "Hamilton Juárez — Frontend Engineer",
+  title: "Hamilton Juárez — Full-Stack Engineer",
   description:
-    "Selected work building production interfaces for ecommerce, SaaS, and service platforms.",
+    "Selected work building production web apps for ecommerce, SaaS, and service platforms — front to back.",
 });
 </script>
 
@@ -26,23 +26,24 @@ useSeoMeta({
         class="reveal inline-flex items-center gap-2 rounded-full border border-ink-800 bg-ink-900/60 px-3 py-1 font-mono text-xs text-ink-300 backdrop-blur"
       >
         <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-accent"></span>
-        Available for frontend roles
+        Available for full-stack roles
       </div>
 
       <h1
         class="reveal text-balance text-4xl font-semibold leading-tight tracking-tight text-ink-50 sm:text-5xl lg:text-6xl"
       >
-        Frontend engineer who ships
-        <span class="text-accent">production interfaces</span>
+        Full-stack engineer who ships
+        <span class="text-accent">production web apps</span>
         for ecommerce, SaaS, and service platforms.
       </h1>
 
       <p
         class="reveal max-w-2xl text-balance text-lg text-ink-300 sm:text-xl"
       >
-        I'm Hamilton — I build fast, accessible web apps with Nuxt, Vue, and
-        TypeScript. Four selected projects below, with case-study detail on
-        architecture, responsibilities, and what was hard about each one.
+        I'm Hamilton — 5+ years building fast, accessible web apps front to
+        back, with Vue/Nuxt, React, TypeScript, and Laravel. Selected projects
+        below, with case-study detail on architecture, responsibilities, and
+        what was hard about each one.
       </p>
 
       <div class="reveal flex flex-wrap items-center gap-3 pt-2">
@@ -67,11 +68,47 @@ useSeoMeta({
           </svg>
         </a>
         <a
-          href="mailto:hamilton@solid.com.sv"
+          href="mailto:hamiltonjuarez97@gmail.com"
           class="inline-flex items-center gap-2 rounded-lg border border-ink-700 bg-ink-900/50 px-5 py-2.5 text-sm font-semibold text-ink-100 transition hover:border-ink-500 hover:bg-ink-900"
         >
           Get in touch
         </a>
+
+        <!-- CV download — bilingual, no JS -->
+        <div
+          class="inline-flex items-center gap-1.5 rounded-lg border border-ink-700 bg-ink-900/50 px-3 py-2 text-sm text-ink-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            class="h-4 w-4 text-ink-400"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"
+            />
+          </svg>
+          <span class="font-semibold text-ink-100">CV</span>
+          <a
+            href="/cv/hamilton-juarez-cv-en.pdf"
+            download
+            aria-label="Download CV in English (PDF)"
+            class="rounded px-2 py-1 font-semibold text-accent transition hover:bg-ink-800"
+            >EN</a
+          >
+          <span class="text-ink-600" aria-hidden="true">·</span>
+          <a
+            href="/cv/hamilton-juarez-cv-es.pdf"
+            download
+            aria-label="Descargar CV en español (PDF)"
+            class="rounded px-2 py-1 font-semibold text-accent transition hover:bg-ink-800"
+            >ES</a
+          >
+        </div>
       </div>
     </div>
   </section>
@@ -80,7 +117,7 @@ useSeoMeta({
   <section id="work" class="relative mx-auto w-full max-w-6xl px-6 py-20 sm:py-28">
     <SectionHeader
       eyebrow="Selected work"
-      title="Four projects I'd defend in an interview."
+      title="Projects I'd defend in an interview."
       description="A mix of public storefronts and private client platforms. Each card opens a full case study with screenshots, stack, responsibilities, and what was hard about the build."
     />
 
@@ -106,6 +143,13 @@ useSeoMeta({
       class="mx-auto grid w-full max-w-6xl gap-12 px-6 py-20 sm:py-28 lg:grid-cols-[1fr_1.5fr]"
     >
       <div class="reveal-up">
+        <img
+          src="/hamilton.jpg"
+          alt="Hamilton Juárez"
+          width="112"
+          height="112"
+          class="mb-5 h-28 w-28 rounded-2xl border border-ink-800 object-cover ring-1 ring-accent/20"
+        />
         <p class="font-mono text-xs uppercase tracking-[0.18em] text-accent">
           About
         </p>
@@ -116,14 +160,15 @@ useSeoMeta({
 
       <div class="reveal-up space-y-5 text-base text-ink-300 sm:text-lg">
         <p>
-          I focus on the bits of frontend that move metrics: clear conversion
+          I focus on the parts of a product that move metrics: clear conversion
           flows, accessible components, and Core Web Vitals you'd be happy to
           show a stakeholder.
         </p>
         <p>
-          Most of my recent work is in <strong class="text-ink-100">Nuxt + Vue 3 + TypeScript + Tailwind</strong>,
-          paired with whatever the backend team prefers — Laravel, Firebase,
-          headless commerce APIs.
+          I work full-stack — <strong class="text-ink-100">Vue/Nuxt or React + TypeScript + Tailwind</strong>
+          on the front, <strong class="text-ink-100">Laravel + MySQL</strong> on
+          the back — and I've led frontend and backend as a tech lead across
+          ecommerce, SaaS, healthcare, and hospitality.
         </p>
         <p>
           Several projects are under NDA, so the cards labelled
@@ -136,8 +181,8 @@ useSeoMeta({
 
         <div class="grid grid-cols-2 gap-4 pt-4 sm:grid-cols-4">
           <div class="rounded-lg border border-ink-800 bg-ink-950/50 p-4">
-            <p class="font-mono text-2xl text-accent">4+</p>
-            <p class="mt-1 text-xs text-ink-400">Years building UIs</p>
+            <p class="font-mono text-2xl text-accent">5+</p>
+            <p class="mt-1 text-xs text-ink-400">Years shipping web apps</p>
           </div>
           <div class="rounded-lg border border-ink-800 bg-ink-950/50 p-4">
             <p class="font-mono text-2xl text-accent">Nuxt</p>
@@ -166,17 +211,17 @@ useSeoMeta({
           Contact
         </p>
         <h2 class="mt-3 text-balance text-3xl font-semibold tracking-tight text-ink-50 sm:text-4xl">
-          Have a frontend role or a project in mind?
+          Have a full-stack role or a project in mind?
         </h2>
         <p class="mt-4 text-lg text-ink-300">
           Email is the fastest way to reach me. Happy to share extra screenshots,
           repo access, or a code walkthrough on request.
         </p>
         <a
-          href="mailto:hamilton@solid.com.sv"
+          href="mailto:hamiltonjuarez97@gmail.com"
           class="mt-6 inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-ink-950 transition hover:bg-accent-soft"
         >
-          hamilton@solid.com.sv
+          hamiltonjuarez97@gmail.com
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

@@ -9,9 +9,20 @@ if (!project) {
 
 useReveal();
 
+// Each case study previews with its own first screenshot.
+const siteUrl = useRuntimeConfig().public.siteUrl;
+const ogImage = project.screenshots[0]
+  ? `${siteUrl}/projects/${project.slug}/${project.screenshots[0].src}`
+  : `${siteUrl}/og.png`;
+
 useSeoMeta({
   title: `${project.name} — Hamilton Juárez`,
   description: project.tagline,
+  ogTitle: `${project.name} — Hamilton Juárez`,
+  ogDescription: project.tagline,
+  ogImage,
+  ogUrl: `${siteUrl}/work/${project.slug}`,
+  twitterImage: ogImage,
 });
 
 // Sibling navigation

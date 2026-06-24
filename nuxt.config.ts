@@ -1,15 +1,19 @@
 import tailwindcss from "@tailwindcss/vite";
 
+// Production origin — used for absolute OG/sitemap URLs. Change if the domain differs.
+const siteUrl = "https://hamilton.dev";
+
 export default defineNuxtConfig({
   compatibilityDate: "2025-01-01",
   devtools: { enabled: true },
   css: ["~/assets/css/main.css"],
+  runtimeConfig: { public: { siteUrl } },
   vite: {
     plugins: [tailwindcss()],
   },
   app: {
     head: {
-      title: "Hamilton Juárez — Frontend Engineer",
+      title: "Hamilton Juárez — Full-Stack Engineer",
       htmlAttrs: { lang: "en" },
       meta: [
         { charset: "utf-8" },
@@ -17,9 +21,28 @@ export default defineNuxtConfig({
         {
           name: "description",
           content:
-            "Frontend engineer building production interfaces for ecommerce, SaaS, and service platforms. Selected work: Buddy Assist, Symple, 39DollarGlasses, AST Surf Resort.",
+            "Full-stack engineer building production web apps for ecommerce, SaaS, and service platforms — front to back.",
         },
         { name: "theme-color", content: "#0a0a0a" },
+        // Open Graph / Twitter defaults (pages override title/description/image)
+        { property: "og:type", content: "website" },
+        { property: "og:site_name", content: "Hamilton Juárez" },
+        { property: "og:url", content: siteUrl },
+        { property: "og:title", content: "Hamilton Juárez — Full-Stack Engineer" },
+        {
+          property: "og:description",
+          content:
+            "Full-stack engineer building production web apps for ecommerce, SaaS, and service platforms — front to back.",
+        },
+        { property: "og:image", content: `${siteUrl}/og.png` },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: "Hamilton Juárez — Full-Stack Engineer" },
+        {
+          name: "twitter:description",
+          content:
+            "Full-stack engineer building production web apps for ecommerce, SaaS, and service platforms.",
+        },
+        { name: "twitter:image", content: `${siteUrl}/og.png` },
       ],
       link: [
         { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },

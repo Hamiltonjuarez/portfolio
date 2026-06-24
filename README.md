@@ -1,6 +1,6 @@
 # Hamilton Juárez — Portfolio
 
-A Nuxt 3 portfolio showcasing four selected frontend projects with
+A Nuxt 3 portfolio showcasing selected frontend projects with
 screenshots, stack, responsibilities, architecture, and challenges per
 case study.
 

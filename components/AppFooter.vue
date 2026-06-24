@@ -10,19 +10,19 @@ const year = new Date().getFullYear();
       <div>
         <p class="font-mono text-sm text-ink-300">Hamilton Juárez</p>
         <p class="text-sm text-ink-500">
-          Frontend engineer · {{ year }}
+          Full-stack engineer · {{ year }}
         </p>
       </div>
 
       <div class="flex flex-wrap items-center gap-4 text-sm text-ink-400">
         <a
-          href="mailto:hamilton@solid.com.sv"
+          href="mailto:hamiltonjuarez97@gmail.com"
           class="transition hover:text-accent"
         >
           Email
         </a>
         <a
-          href="https://github.com/"
+          href="https://github.com/Hamiltonjuarez"
           target="_blank"
           rel="noopener"
           class="transition hover:text-accent"
@@ -30,7 +30,7 @@ const year = new Date().getFullYear();
           GitHub
         </a>
         <a
-          href="https://www.linkedin.com/"
+          href="https://www.linkedin.com/in/arturo-juarez-20aa8a205"
           target="_blank"
           rel="noopener"
           class="transition hover:text-accent"
